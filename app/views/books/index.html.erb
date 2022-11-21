@@ -1,0 +1,29 @@
+<%= render 'layouts/header' %>
+<br/><br/>
+
+<table class="table table-striped  table-hover">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Description</th>
+      <th id="publish ">Publish Year</th>
+      <th scope="col">rating</th>
+      <th scope="col">actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <%@books.each do |book| %>
+       <td> <%=book.name%></td>
+       <td><%= book.author %></td>
+       <td><%=book.description %></td>
+       <td><%=book.publish_year%></td>
+       <td><%=book.rating%></td>
+       <td><%=book.rating%></td>
+      <%end%>
+    </tr>
+  </tbody>
+</table>
+<%# <button type="button" class="btn btn-secondary">Secondary</button> %>
+<%= link_to  "reate new book", new_book_path , class:"btn btn-secondary btnPosition" %>
