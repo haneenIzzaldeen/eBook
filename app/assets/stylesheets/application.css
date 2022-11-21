@@ -19,7 +19,7 @@
     font-size: 1.7rem;
  }
 .table{
-width : 55%;
+width : 58%;
 margin-left:20%
 }
 #publish{
@@ -28,4 +28,14 @@ width:10%
 
 .btnPosition{
 margin-left: 20%;
+}
+.form{
+width: 18%;
+margin-left:2%
+}
+.bodyField{
+width:13%
+}
+.secField{
+width:15%
 }

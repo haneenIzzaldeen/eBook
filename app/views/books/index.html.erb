@@ -9,21 +9,27 @@
       <th scope="col">Description</th>
       <th id="publish ">Publish Year</th>
       <th scope="col">rating</th>
-      <th scope="col">actions</th>
+      <th scope="col">update</th>
+      <th scope="col">delete</th>
+       <th scope="col">show</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <%@books.each do |book| %>
+  <tbody >
+  <%@books.each do |book| %>
+    <tr >
+      
        <td> <%=book.name%></td>
        <td><%= book.author %></td>
        <td><%=book.description %></td>
        <td><%=book.publish_year%></td>
        <td><%=book.rating%></td>
-       <td><%=book.rating%></td>
-      <%end%>
+       <td class="bodyField"  > <%=link_to "Edit Book ", edit_book_path(book) ,class:"btn btn-primary"%></td>
+       <td class="secField"  > <%=link_to "delete Book", book, data: {'turbo-method': :delete},class:"btn btn-danger"%></td>
+        <td class="secField"  > <%=link_to "show Book", book_path(book) ,class:"btn btn-dark"%></td>
     </tr>
+      <%end%>
   </tbody>
 </table>
 <%# <button type="button" class="btn btn-secondary">Secondary</button> %>
-<%= link_to  "reate new book", new_book_path , class:"btn btn-secondary btnPosition" %>
+<%= link_to  "create new book", new_book_path , class:"btn btn-secondary btnPosition" %>
+</br></br></br>
